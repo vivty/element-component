@@ -1,0 +1,41 @@
+{
+  "name": "super_admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "core-js": "^3.6.5",
+    "element-ui": "^2.15.3",
+    "eslint-plugin-html": "^6.1.2",
+    "node-sass": "^4.14.1",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.0.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.3.2",
+    "prettier-eslint-cli": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
