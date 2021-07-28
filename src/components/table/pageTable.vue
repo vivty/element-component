@@ -169,9 +169,6 @@ export default {
     handleCurrentChange(val) {
       this.$emit('handleCurrentChange', val);
     },
-    change(prop, value, row) {
-      this.$emit('change', prop, value, row);
-    },
     buttonClick(prop, row) {
       this.$emit('buttonClick', prop, row);
     }

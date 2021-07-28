@@ -114,9 +114,6 @@ export default {
     }
   },
   methods: {
-    change(type, val) {
-      this.$emit('change', type, val);
-    },
     buttonClick(prop, val) {
       this.$emit('buttonClick', prop, val);
     },
