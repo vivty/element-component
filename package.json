@@ -1,13 +1,20 @@
 {
-  "name": "super_admin",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vue-common",
+  "version": "1.0.1",
+  "private": false,
+  "description": "element component",
+  "main": "lib/vue-common-group.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name vue-common-group --dest lib src/index.js",
     "prepare": "husky install"
   },
+  "keywords": [
+    "component",
+    "vue"
+  ],
   "dependencies": {
     "@vue/eslint-config-prettier": "^6.0.0",
     "core-js": "^3.6.5",
@@ -25,6 +32,8 @@
     "eslint": "^7.0.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^6.2.2",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
     "prettier": "^2.3.2",
     "prettier-eslint-cli": "^5.0.1",
     "sass-loader": "^7.1.0",
@@ -35,7 +44,16 @@
     "last 2 versions",
     "not dead"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged"
+    }
+  },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "src/**/*.{js,vue}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ]
   }
 }
