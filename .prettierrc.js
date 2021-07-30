@@ -3,28 +3,32 @@
 module.exports = {
   tabWidth: 2,
   singleQuote: true,
-  trailingComma: 'none', // 尾部不加逗号
-  printWidth: 120,
-  arrowParens: 'always', // 箭头函数单个参数时加括号
+  printWidth: 120,  // 最大长度120个字符
+  semi: false, // 行末分号
+  singleQuote: true,  // 单引号
+  jsxSingleQuote: false,   // JSX双引号
+  // 尽可能使用尾随逗号（包括函数参数）
+  trailingComma: "none",
+  // 在对象文字中打印括号之间的空格。
   bracketSpacing: true,
-  embeddedLanguageFormatting: 'auto',
-  htmlWhitespaceSensitivity: 'ignore',
-  insertPragma: false,
+  // > 标签放在最后一行的末尾，而不是单独放在下一行
   jsxBracketSameLine: false,
-  jsxSingleQuote: false,
-  proseWrap: 'never',
-  quoteProps: 'as-needed',
-  requirePragma: false,
-  semi: true,
+  // 箭头圆括号
+  arrowParens: "always", // 箭头函数单个参数时加括号
+  // 在文件顶部插入一个特殊的 @format 标记，指定文件格式需要被格式化。
+  insertPragma: false,
+  // 缩进
+  tabWidth: 2,
+  // 使用tab还是空格
   useTabs: false,
-  vueIndentScriptAndStyle: false,
+  // 行尾换行格式
   endOfLine: "auto",
   HTMLWhitespaceSensitivity: "ignore",
   extends: [
-    //继承 vue 的标准特性
-    "plugin:vue/essential",
-    "eslint:recommended",
-    //避免与 prettier 冲突
-    "plugin:prettier/recommended",
-  ]
-};
+      //继承 vue 的标准特性
+      "plugin:vue/essential",
+      "eslint:recommended",
+      //避免与 prettier 冲突
+      "plugin:prettier/recommended",
+    ]
+}
